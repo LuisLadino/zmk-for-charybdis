@@ -25,12 +25,12 @@
 
         Base {
             bindings = <
-&kp GRAVE          &kp N1  &kp N2  &kp N3          &kp N4         &kp N5            &kp N6   &kp N7     &kp N8     &kp N9   &kp N0         &kp MINUS
-&kp LEFT_BRACKET   &kp Q   &kp W   &kp F           &kp P          &kp G             &kp J    &kp L      &kp U      &kp Y    &kp SEMICOLON  &kp EQUAL
-&kp RIGHT_BRACKET  &kp A   &kp R   &kp S           &kp T          &kp D             &kp H    &kp N      &kp E      &kp I    &kp O          &kp APOS
-&kp LCTRL          &kp Z   &kp X   &kp C           &kp V          &kp B             &kp K    &kp M      &kp COMMA  &kp DOT  &kp SLASH      &kp RIGHT_GUI
-                                   &kp LEFT_SHIFT  &kp ENTER      &lt 1 LEFT_ALT    &kp DEL  &mkp LCLK
-                                                   &kp BACKSPACE  &kp SPACE         &kp TAB
+&kp GRAVE          &kp N1  &kp N2  &kp N3     &kp N4         &kp N5            &kp N6   &kp N7     &kp N8     &kp N9   &kp N0         &kp MINUS
+&kp LEFT_BRACKET   &kp Q   &kp W   &kp F      &kp P          &kp G             &kp J    &kp L      &kp U      &kp Y    &kp SEMICOLON  &kp EQUAL
+&kp RIGHT_BRACKET  &kp A   &kp R   &kp S      &kp T          &kp D             &kp H    &kp N      &kp E      &kp I    &kp O          &kp APOS
+&kp LCTRL          &kp Z   &kp X   &kp C      &kp V          &kp B             &kp K    &kp M      &kp COMMA  &kp DOT  &kp SLASH      &kp RIGHT_GUI
+                                   &kp SPACE  &kp ENTER      &lt 1 LEFT_ALT    &kp DEL  &mkp LCLK
+                                              &kp BACKSPACE  &kp LEFT_SHIFT    &kp TAB
             >;
 
             trackball-bindings = <&tmv_coarse>;
@@ -38,11 +38,11 @@
 
         layer_1 {
             bindings = <
-&kp ESCAPE     &kp F9          &kp F10          &kp F11       &kp F12         &trans          &trans         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
-&kp BACKSLASH  &kp F5          &kp F6           &kp F7        &kp F8          &trans          &trans         &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
-&kp PIPE       &kp F1          &kp F2           &kp F3        &kp F4          &kp SLASH       &kp PAGE_UP    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-&kp LCTRL      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp ASTERISK    &kp PAGE_DOWN  &kp NUMBER_0  &kp COMMA     &kp PERIOD    &trans  &trans
-                                                &kp INS       &trans          &trans          &kp END        &mkp RCLK
+&kp ESCAPE     &kp F9          &kp F10          &kp F11       &kp F12         &trans          &trans        &trans        &trans        &trans        &trans  &trans
+&kp BACKSLASH  &kp F5          &kp F6           &kp F7        &kp F8          &trans          &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans  &trans
+&kp PIPE       &kp F1          &kp F2           &kp F3        &kp F4          &kp AT_SIGN     &kp ASTERISK  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
+&kp LCTRL      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp ASTERISK    &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+                                                &kp INS       &trans          &trans          &kp END       &mkp RCLK
                                                               &none           &trans          &kp ENTER
             >;
         };
