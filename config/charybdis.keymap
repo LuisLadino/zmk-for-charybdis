@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -19,7 +20,35 @@
             layers = <0>;
         };
     };
+macros {
+        fueling: fueling {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(C) &kp R &kp E &kp W &kp SPACE &kp C &kp A &kp L &kp L &kp E &kp D &kp SPACE &kp F &kp O &kp R &kp SPACE &kp F &kp U &kp E &kp L &kp I &kp N &kp G &kp DOT>;
+            label = "FUELING";
+        };
 
+        potable: potable {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(C) &kp R &kp E &kp W &kp SPACE &kp C &kp A &kp L &kp L &kp E &kp D &kp SPACE &kp F &kp O &kp R &kp SPACE &kp P &kp O &kp T &kp A &kp B &kp L &kp E &kp SPACE &kp W &kp A &kp T &kp E &kp R &kp DOT &kp SPACE &kp LS(R) &kp A &kp M &kp P &kp SPACE &kp A &kp D &kp V &kp I &kp S &kp E &kp D &kp DOT>;
+            label = "POTABLE";
+        };
+
+        catering: catering {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(C) &kp R &kp E &kp W &kp SPACE &kp C &kp A &kp L &kp L &kp E &kp D &kp SPACE &kp F &kp O &kp R &kp SPACE &kp C &kp A &kp T &kp E &kp R &kp I &kp N &kp G &kp DOT &kp SPACE &kp LS(C) &kp A &kp T &kp E &kp R &kp I &kp N &kp G &kp SPACE &kp A &kp D &kp V &kp I &kp S &kp E &kp D &kp DOT>;
+            label = "CATERING";
+        };
+
+        ops: ops {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(O) &kp P &kp E &kp R &kp A &kp T &kp I &kp O &kp N &kp S &kp SPACE &kp C &kp O &kp N &kp T &kp A &kp C &kp T &kp E &kp D &kp SPACE>;
+            label = "OPS";
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
@@ -38,10 +67,10 @@
 
         layer_1 {
             bindings = <
-&kp ESCAPE     &kp F9          &kp F10          &kp F11       &kp F12         &trans             &trans         &trans        &trans        &trans        &trans        &trans
-&kp BACKSLASH  &kp F5          &kp F6           &kp F7        &kp F8          &trans             &trans         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans
-&kp PIPE       &kp F1          &kp F2           &kp F3        &kp F4          &kp AT_SIGN        &kp ASTERISK   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans
-&kp RCTRL      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp ASTERISK       &trans         &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
+&kp ESCAPE     &kp F9          &kp F10          &kp F11       &kp F12         &trans             &fueling       &potable      &catering     &trans        &trans        &trans
+&kp BACKSLASH  &kp F5          &kp F6           &kp F7        &kp F8          &trans             &ops           &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans
+&kp PIPE       &kp F1          &kp F2           &kp F3        &kp F4          &kp AT_SIGN        &msc SCRL_UP   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans
+&kp RCTRL      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp ASTERISK       &msc SCRL_DOWN &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
                                                 &kp INS       &trans          &trans             &kp DELETE     &mkp RCLK
                                                               &none           &kp RIGHT_SHIFT    &kp RIGHT_ALT
             >;
