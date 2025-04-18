@@ -20,7 +20,8 @@
             layers = <0>;
         };
     };
-macros {
+
+    macros {
         fueling: fueling {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -49,9 +50,9 @@ macros {
             label = "OPS";
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
-
         Base {
             bindings = <
 &kp GRAVE          &kp N1  &kp N2  &kp N3     &kp N4         &kp N5            &kp N6          &kp N7     &kp N8     &kp N9   &kp N0         &kp MINUS
