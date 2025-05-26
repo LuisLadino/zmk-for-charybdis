@@ -21,35 +21,41 @@
     };
 
     macros {
-        fueling: fueling {
+        password: password {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(C) &kp R &kp E &kp W &kp SPACE &kp C &kp A &kp L &kp L &kp E &kp D &kp SPACE &kp F &kp O &kp R &kp SPACE &kp F &kp U &kp E &kp L &kp I &kp N &kp G &kp DOT>;
-            label = "FUELING";
+            bindings = <&none &kp LS(P) &kp E &kp L &kp U &kp C &kp H &kp E &kp EXCL &kp N0 &kp N9 &kp N2 &kp N7>;
+            label = "PASSWORD";
         };
 
-        potable: potable {
+        employeeid: employeeid {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(C) &kp R &kp E &kp W &kp SPACE &kp C &kp A &kp L &kp L &kp E &kp D &kp SPACE &kp F &kp O &kp R &kp SPACE &kp P &kp O &kp T &kp A &kp B &kp L &kp E &kp SPACE &kp W &kp A &kp T &kp E &kp R &kp DOT &kp SPACE &kp LS(R) &kp A &kp M &kp P &kp SPACE &kp A &kp D &kp V &kp I &kp S &kp E &kp D &kp DOT>;
-            label = "POTABLE";
+            bindings = <&none &kp N7 &kp N5 &kp N2 &kp N1 &kp N5 &kp N4>;
+            label = "EMPLOYEEID";
         };
 
-        catering: catering {
+        sabre: sabre {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(C) &kp R &kp E &kp W &kp SPACE &kp C &kp A &kp L &kp L &kp E &kp D &kp SPACE &kp F &kp O &kp R &kp SPACE &kp C &kp A &kp T &kp E &kp R &kp I &kp N &kp G &kp DOT &kp SPACE &kp LS(C) &kp A &kp T &kp E &kp R &kp I &kp N &kp G &kp SPACE &kp A &kp D &kp V &kp I &kp S &kp E &kp D &kp DOT>;
-            label = "CATERING";
+            bindings = <&none &kp T &kp U &kp L &kp W &kp F &kp P &kp N1 &kp N2>;
+            label = "SABRE";
         };
 
-        ops: ops {
+        decsin: decsin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(O) &kp P &kp E &kp R &kp A &kp T &kp I &kp O &kp N &kp S &kp SPACE &kp C &kp O &kp N &kp T &kp A &kp C &kp T &kp E &kp D &kp SPACE>;
-            label = "OPS";
+            bindings = <&none &kp B &kp S &kp I &kp N7 &kp N5 &kp N2 &kp N1 &kp N5 &kp N4 &kp M &kp Q>;
+            label = "DECSIN";
+        };
+
+        sabrein: sabrein {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp S &kp I &kp N7 &kp N5 &kp N2 &kp N1 &kp N5 &kp N4 &kp E &kp M &kp Q>;
+            label = "SABREIN";
         };
     };
-
     keymap {
         compatible = "zmk,keymap";
         Base {
