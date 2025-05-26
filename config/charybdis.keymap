@@ -56,6 +56,7 @@
             label = "SABREIN";
         };
     };
+
     keymap {
         compatible = "zmk,keymap";
         Base {
