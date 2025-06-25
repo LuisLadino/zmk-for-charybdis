@@ -38,7 +38,7 @@
         sabre: sabre {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp T &kp U &kp L &kp W &kp F &kp P &kp N1 &kp N2>;
+            bindings = <&none &kp J &kp L &kp U &kp H &kp N &kp E &kp N1 &kp N2>;
             label = "SABRE";
         };
 
