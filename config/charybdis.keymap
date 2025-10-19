@@ -1,7 +1,8 @@
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     tapping-term-ms = <200>;
@@ -28,45 +29,25 @@
             label = "PASSWORD";
         };
 
-        employeeid: employeeid {
+        claude_start: claude_start {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp N7 &kp N5 &kp N2 &kp N1 &kp N5 &kp N4>;
-            label = "EMPLOYEEID";
-        };
-
-        sabre: sabre {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp J &kp L &kp U &kp H &kp N &kp E &kp N1 &kp N2>;
-            label = "SABRE";
-        };
-
-        decsin: decsin {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp B &kp S &kp I &kp N7 &kp N5 &kp N2 &kp N1 &kp N5 &kp N4 &kp M &kp Q>;
-            label = "DECSIN";
-        };
-
-        sabrein: sabrein {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp S &kp I &kp N7 &kp N5 &kp N2 &kp N1 &kp N5 &kp N4 &kp E &kp M &kp Q>;
-            label = "SABREIN";
+            bindings = <&none &kp C &kp L &kp A &kp U &kp D &kp E &kp SPACE &kp MINUS &kp MINUS &kp D &kp A &kp N &kp G &kp E &kp R &kp O &kp U &kp S &kp L &kp Y &kp MINUS &kp S &kp K &kp I &kp P &kp MINUS &kp P &kp E &kp R &kp M &kp I &kp S &kp S &kp I &kp O &kp N &kp S>;
+            label = "CLAUDE_START";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
+
         Base {
             bindings = <
 &kp GRAVE          &kp N1  &kp N2  &kp N3     &kp N4         &kp N5            &kp N6          &kp N7     &kp N8     &kp N9   &kp N0         &kp MINUS
 &kp LEFT_BRACKET   &kp Q   &kp W   &kp F      &kp P          &kp G             &kp J           &kp L      &kp U      &kp Y    &kp SEMICOLON  &kp EQUAL
 &kp RIGHT_BRACKET  &kp A   &kp R   &kp S      &kp T          &kp D             &kp H           &kp N      &kp E      &kp I    &kp O          &kp APOS
 &kp LCTRL          &kp Z   &kp X   &kp C      &kp V          &kp B             &kp K           &kp M      &kp COMMA  &kp DOT  &kp SLASH      &kp RIGHT_GUI
-                                   &kp SPACE  &kp TAB      &lt 1 LEFT_ALT    &kp LEFT_SHIFT  &mkp LCLK
-                                              &kp BACKSPACE  &kp ENTER           &kp DELETE
+                                   &kp SPACE  &kp TAB        &lt 1 LEFT_ALT    &kp LEFT_SHIFT  &mkp LCLK
+                                              &kp BACKSPACE  &kp ENTER         &kp DELETE
             >;
 
             trackball-bindings = <&tmv_coarse>;
@@ -74,9 +55,9 @@
 
         layer_1 {
             bindings = <
-&kp ESCAPE     &kp F9          &kp F10          &kp F11       &kp F12         &sabrein           &trans         &trans        &trans        &trans        &trans        &trans
-&kp BACKSLASH  &kp F5          &kp F6           &kp F7        &kp F8          &decsin            &sabre         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans
-&kp PIPE       &kp F1          &kp F2           &kp F3        &kp F4          &kp AT_SIGN        &employeeid    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans
+&kp ESCAPE     &kp F9          &kp F10          &kp F11       &kp F12         &claude_start      &trans         &trans        &trans        &trans        &trans        &trans
+&kp BACKSLASH  &kp F5          &kp F6           &kp F7        &kp F8          &none              &none          &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans
+&kp PIPE       &kp F1          &kp F2           &kp F3        &kp F4          &kp AT_SIGN        &none          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans
 &kp RCTRL      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp ASTERISK       &password      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
                                                 &kp INS       &trans          &trans             &kp DELETE     &mkp RCLK
                                                               &none           &kp RIGHT_SHIFT    &kp RIGHT_ALT
@@ -85,11 +66,10 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans  &trans
-                                          &trans   &trans      &trans       &trans        &trans
-                                                         &trans         &trans          &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &none
             >;
         };
 
