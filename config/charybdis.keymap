@@ -31,7 +31,7 @@
         claude_start: claude_start {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp C &kp L &kp A &kp U &kp D &kp E &kp SPACE &kp MINUS &kp MINUS &kp D &kp A &kp N &kp G &kp E &kp R &kp O &kp U &kp S &kp L &kp Y &kp MINUS &kp S &kp K &kp I &kp P &kp MINUS &kp P &kp E &kp R &kp M &kp I &kp S &kp S &kp I &kp O &kp N &kp S>;
+            bindings = <&none &kp C &kp L &kp A &kp U &kp D &kp E &kp SPACE &kp MINUS &kp MINUS &kp D &kp A &kp N &kp G &kp E &kp R &kp O &kp U &kp S &kp L &kp Y &kp MINUS &kp S &kp K &kp I &kp P &kp MINUS &kp P &kp E &kp R &kp M &kp I &kp S &none &kp S &kp I &kp O &kp N &kp S>;
             label = "CLAUDE_START";
             wait-ms = <5>;
         };
@@ -63,7 +63,7 @@
         layer_1 {
             bindings = <
 &kp ESCAPE     &kp F9          &kp F10          &kp F11       &kp F12         &claude_start          &trans         &trans        &trans        &trans        &trans        &trans
-&kp BACKSLASH  &kp F5          &kp F6           &kp F7        &kp F8          &trans            &trans         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans
+&kp BACKSLASH  &kp F5          &kp F6           &kp F7        &kp F8          &knowledge             &trans         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans
 &kp PIPE       &kp F1          &kp F2           &kp F3        &kp F4          &kp AT_SIGN        &trans   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans
 &kp RCTRL      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp ASTERISK       &password      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
                                                 &kp INS       &trans          &trans             &kp DELETE     &mkp RCLK
