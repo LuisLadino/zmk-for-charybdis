@@ -33,13 +33,13 @@
             #binding-cells = <0>;
             bindings = <&none &kp C &kp L &kp A &kp U &kp D &kp E &kp SPACE &kp MINUS &kp MINUS &kp D &kp A &kp N &kp G &kp E &kp R &kp O &kp U &kp S &kp L &kp Y &kp MINUS &kp S &kp K &kp I &kp P &kp MINUS &kp P &kp E &kp R &kp M &kp I &kp S &none &kp S &kp I &kp O &kp N &kp S>;
             label = "CLAUDE_START";
-            wait-ms = <5>;
+            wait-ms = <10>;
         };
 
         knowledge: knowledge {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp FSLH &kp S &kp K &kp I &kp L &kp L &kp SPACE &kp K &kp N &kp O &kp W &kp L &kp E &kp D &kp G &kp E &kp MINUS &kp O &kp R &kp C &kp H &kp E &kp S &kp T &kp R &kp A &kp T &kp O &kp R>;
+            bindings = <&none &kp S &kp K &kp I &kp L &kp L &kp SPACE &kp K &kp N &kp O &kp W &kp L &kp E &kp D &kp G &kp E &kp MINUS &kp O &kp R &kp C &kp H &kp E &kp S &kp T &kp R &kp A &kp T &kp O &kp R>;
             label = "KNOWLEDGE";
             wait-ms = <5>;
         };
@@ -66,7 +66,7 @@
 &kp BACKSLASH  &kp F5          &kp F6           &kp F7        &kp F8          &knowledge             &trans         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans
 &kp PIPE       &kp F1          &kp F2           &kp F3        &kp F4          &kp AT_SIGN        &trans   &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &trans
 &kp RCTRL      &kp LEFT_ARROW  &kp RIGHT_ARROW  &kp UP_ARROW  &kp DOWN_ARROW  &kp ASTERISK       &password      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
-                                                &kp INS       &trans          &trans             &kp DELETE     &mkp RCLK
+                                                &kp RIGHT_ALT      &kp INS         &trans             &kp DELETE     &mkp RCLK
                                                               &none           &kp RIGHT_SHIFT    &kp RIGHT_ALT
             >;
         };
